@@ -92,7 +92,7 @@ class SistemaCotizacionREMAA:
         """
         self.root = root
         self.root.title("Sistema de Cotización REMAA")
-        self.root.geometry("1500x900")
+        self.root.geometry("1300x750")
         self.root.configure(bg="#f0f0f0")
         
         # Variables de estado
@@ -305,7 +305,7 @@ class SistemaCotizacionREMAA:
             show="headings",
             yscrollcommand=scroll_y_conceptos.set,
             xscrollcommand=scroll_x_conceptos.set,
-            height=12
+            height=6
         )
         
         scroll_y_conceptos.config(command=self.tabla_conceptos.yview)
@@ -355,7 +355,7 @@ class SistemaCotizacionREMAA:
             show="headings",
             yscrollcommand=scroll_y_cot.set,
             xscrollcommand=scroll_x_cot.set,
-            height=8
+            height=5
         )
         
         scroll_y_cot.config(command=self.tabla_cotizacion.yview)
@@ -388,7 +388,7 @@ class SistemaCotizacionREMAA:
         
         # ==================== PANEL DE ACCIONES ====================
         frame_acciones = tk.Frame(self.root, bg="#263238", padx=20, pady=20)
-        frame_acciones.pack(fill=tk.X, padx=15, pady=(0, 15))
+        frame_acciones.pack(fill=tk.X, padx=15, pady=(0, 10), side=tk.BOTTOM)
         
         # Botones de acción
         tk.Button(
